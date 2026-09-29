@@ -1,0 +1,6 @@
+# Exportaciones con datos de ejecuciones o reportes reales
+*.env
+.env*
+reportes-reales/
+.DS_Store
+Thumbs.db
