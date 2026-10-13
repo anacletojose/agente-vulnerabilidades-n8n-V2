@@ -258,9 +258,7 @@ desde la instancia de n8n y mantenerse fuera del workflow compartido.
 ## Instalación e importación
 
 1.  Iniciá n8n y abrí su interfaz web.
-2.  Importá el archivo
-    `Agente_multiagente_Gemini_V2_paralelo_remediacion_con_NVD_fix_schema.json`
-    como un workflow nuevo.
+2.  Importá alguno de los archivos en la carpeta "Sistema multiagente" como un workflow nuevo.
 3.  Abrí cada nodo de modelo Gemini y seleccioná o creá las credenciales
     correspondientes.
 4.  Revisá las credenciales, los parámetros de los nodos y el acceso de
