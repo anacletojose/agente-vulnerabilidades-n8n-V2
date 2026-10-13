@@ -64,7 +64,7 @@ PDF + contexto opcional
                           seleccionable u OCR     
                           previo.                 
 
-  3\. Extracción          Convierte los hallazgos Modelo Gemini con
+  3\. Extracción          Convierte los hallazgos Modelo IA con
                           del documento a una     esquema de salida
                           estructura definida:    
                           nombre, CVE/CWE,        
@@ -86,7 +86,7 @@ PDF + contexto opcional
 
   5\. Inspección          Busca indicadores como  Reglas
   documental              caracteres invisibles,  determinísticas +
-                          comentarios o etiquetas modelo Gemini
+                          comentarios o etiquetas modelo IA
                           HTML, frases de         
                           anulación de            
                           instrucciones, intentos 
@@ -106,7 +106,7 @@ PDF + contexto opcional
                           aplica reglas de        
                           prioridad explícitas.   
 
-  7\. Análisis en         Dos agentes trabajan    Dos agentes Gemini
+  7\. Análisis en         Dos agentes trabajan    Dos agentes IA
   paralelo                sobre los hallazgos     
                           priorizados: uno        
                           redacta el análisis     
@@ -203,7 +203,7 @@ cada identificador recibido. El plan incluye:
 -   Nivel de confianza y necesidad de aprobación.
 
 Para cada hallazgo que incluye un CVE, el agente tiene instrucciones de
-consultar NVD ---un CVE por llamada, hasta seis consultas--- para
+consultar NVD ---un CVE por llamada, hasta diez consultas--- para
 corroborar la descripción y los datos oficiales antes de recomendar una
 remediación. Si NVD falla o no aporta datos, debe continuar con la
 información disponible y dejar constancia de la limitación.
@@ -241,7 +241,7 @@ distribuirse o actuar sobre ellos.
 
 -   Una instalación de n8n con soporte para los nodos incluidos en el
     JSON.
--   Credenciales de Google Gemini configuradas en los cuatro nodos de
+-   Credenciales de modelos de IA configuradas en los cuatro nodos de
     modelo: extractor, detector, analista y plan de remediación.
 -   Acceso a Internet desde n8n para consultar los servicios públicos de
     EPSS, CISA KEV y NVD.
@@ -259,7 +259,7 @@ desde la instancia de n8n y mantenerse fuera del workflow compartido.
 
 1.  Iniciá n8n y abrí su interfaz web.
 2.  Importá alguno de los archivos en la carpeta "Sistema multiagente" como un workflow nuevo.
-3.  Abrí cada nodo de modelo Gemini y seleccioná o creá las credenciales
+3.  Abrí cada nodo del modelo de IA y seleccioná o creá las credenciales
     correspondientes.
 4.  Revisá las credenciales, los parámetros de los nodos y el acceso de
     red a EPSS, CISA KEV y NVD.
@@ -285,8 +285,8 @@ compatibilidad de la versión instalada y de los nodos LangChain/Gemini.
 
 ## Privacidad y uso responsable
 
--   Los textos del PDF y el contexto se envían a los modelos de Google
-    Gemini configurados. Verificá las condiciones de privacidad,
+-   Los textos del PDF y el contexto se envían a los modelos de IA
+    configurados. Verificá las condiciones de privacidad,
     retención y tratamiento de datos del proveedor antes de procesar
     reportes reales.
 -   Los hallazgos pueden revelar nombres internos de servidores,
